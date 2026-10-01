@@ -1,889 +1,607 @@
 <!DOCTYPE html>
-<!-- saved from url=(0113)file:///C:/Users/praka/Documents/Codex/2026-10-01/i-x20/outputs/Dhanalakshmi%20P%20-%20Professional%20Resume.html -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Dhanalakshmi P - Professional Resume</title>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dhanalakshmi P | Personal Website</title>
   <style>
     :root {
-      --navy: #151c2b;
-      --ink: #101828;
-      --muted: #596476;
-      --panel: #4b5563;
-      --line: #d8dee8;
-      --soft: #f5f7fb;
-      --accent: #9f4708;
-      --shadow: 0 24px 55px rgba(16, 24, 40, 0.14);
+      --ink: #1f2933;
+      --text: #374151;
+      --muted: #6b7280;
+      --rule: #cfd8dc;
+      --accent: #25636b;
+      --accent-soft: #eef7f8;
+      --paper: #ffffff;
+      --page: #f4f6f7;
     }
 
     * {
       box-sizing: border-box;
-      line-height: 1.45;
-    }
-
-    html {
-      scroll-behavior: smooth;
     }
 
     body {
       margin: 0;
-      min-height: 100vh;
-      color: var(--ink);
-      background: #ffffff;
-      font-family: Aptos, "Segoe UI", Candara, Calibri, sans-serif;
+      color: var(--text);
+      background: var(--page);
+      font-family: "Segoe UI", Aptos, Arial, sans-serif;
       font-size: 16px;
-    }
-
-    ::selection {
-      color: #ffffff;
-      background: var(--accent);
+      line-height: 1.55;
     }
 
     a {
       color: inherit;
+      text-decoration-thickness: 1px;
       text-underline-offset: 3px;
     }
 
-    button,
-    a {
-      touch-action: manipulation;
+    .resume-page {
+      width: min(100% - 32px, 960px);
+      margin: 28px auto;
+      background: var(--paper);
+      border: 1px solid #dde5e8;
+      box-shadow: 0 16px 40px rgba(31, 41, 51, 0.08);
     }
 
-    svg {
-      width: 18px;
-      height: 18px;
-      stroke: currentColor;
-      stroke-width: 2;
-      fill: none;
-      stroke-linecap: round;
-      stroke-linejoin: round;
+    .header {
+      display: grid;
+      grid-template-columns: 1fr 128px;
+      gap: 28px;
+      align-items: start;
+      padding: 34px 40px 20px;
+      border-bottom: 2px solid var(--ink);
     }
 
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 5;
-      color: #f8fafc;
-      background: var(--navy);
-      box-shadow: 0 8px 22px rgba(15, 23, 42, 0.12);
-    }
-
-    .nav-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      width: min(100% - 32px, 1060px);
-      min-height: 58px;
-      margin: 0 auto;
-    }
-
-    .brand {
-      font-size: 1.05rem;
-      font-weight: 800;
+    .name {
+      margin: 0;
+      color: var(--ink);
+      font-size: 3rem;
+      line-height: 1.12;
       letter-spacing: 0;
+      font-weight: 750;
     }
 
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      color: #dce3ef;
-      font-size: 0.86rem;
+    .title {
+      margin: 8px 0 0;
+      color: var(--accent);
+      font-size: 1.05rem;
       font-weight: 700;
     }
 
-    .nav-links a {
-      text-decoration: none;
+    .summary {
+      margin: 18px 0 0;
+      max-width: 680px;
+      color: var(--text);
     }
 
-    .nav-links a:hover {
-      color: #ffffff;
-    }
-
-    .print-button {
-      min-height: 38px;
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      border-radius: 8px;
-      padding: 7px 12px;
-      color: #ffffff;
-      background: rgba(255, 255, 255, 0.08);
-      font-weight: 800;
-      cursor: pointer;
-    }
-
-    .print-button:hover {
-      background: rgba(255, 255, 255, 0.16);
-    }
-
-    .print-button:focus-visible,
-    a:focus-visible {
-      outline: 3px solid rgba(241, 132, 50, 0.42);
-      outline-offset: 3px;
-    }
-
-    .page {
-      width: min(100% - 32px, 1060px);
-      margin: 0 auto;
-      padding: 42px 0 34px;
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 230px;
-      gap: 56px;
-      align-items: center;
-      min-height: 430px;
-    }
-
-    .intro-title {
-      margin: 0 0 16px;
-      color: var(--accent);
-      font-size: clamp(2.15rem, 5vw, 4.4rem);
-      font-weight: 900;
-      letter-spacing: 0;
-    }
-
-    .intro-title span {
-      display: block;
-      color: var(--ink);
-      font-size: clamp(2rem, 4.5vw, 4rem);
-    }
-
-    .intro-role {
-      margin: -4px 0 0;
-      color: var(--accent);
-      font-size: clamp(1.35rem, 2.6vw, 2.1rem);
-      font-weight: 900;
-    }
-
-    .objective-card {
-      width: min(100%, 560px);
-      margin: 26px 0 20px;
-      padding: 22px;
-      color: #f8fafc;
-      background: var(--panel);
-      border-radius: 8px;
-      box-shadow: 0 18px 38px rgba(15, 23, 42, 0.18);
-    }
-
-    .objective-card p {
+    .photo {
       margin: 0;
-      color: #eef4fb;
+      justify-self: end;
+      width: 128px;
+      padding: 4px;
+      border: 1px solid var(--rule);
+      background: #ffffff;
     }
 
-    .contact-strip {
+    .photo img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center 18%;
+    }
+
+    .contact {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1.2fr 0.7fr 0.7fr;
+      gap: 0;
+      border-bottom: 1px solid var(--rule);
+      background: #fbfcfc;
+    }
+
+    .contact a,
+    .contact span {
+      display: block;
+      min-width: 0;
+      padding: 11px 16px;
+      border-right: 1px solid var(--rule);
+      color: var(--ink);
+      font-size: 0.91rem;
+      font-weight: 600;
+      overflow-wrap: anywhere;
+    }
+
+    .contact :last-child {
+      border-right: 0;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 34px;
+      padding: 28px 40px 34px;
+    }
+
+    .column {
+      display: grid;
+      align-content: start;
+      gap: 24px;
+    }
+
+    .section-title {
+      margin: 0 0 10px;
+      padding-bottom: 5px;
+      color: var(--ink);
+      border-bottom: 1px solid var(--rule);
+      font-size: 0.92rem;
+      font-weight: 800;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .skills-list {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      width: min(100%, 650px);
+      gap: 8px;
       margin: 0;
       padding: 0;
       list-style: none;
     }
 
-    .contact-strip li {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 10px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      color: var(--muted);
-      background: var(--soft);
+    .skills-list li {
+      padding: 6px 9px;
+      border: 1px solid #d7e2e4;
+      background: var(--accent-soft);
+      color: #214f55;
       font-size: 0.9rem;
       font-weight: 700;
     }
 
-    .photo-card {
-      justify-self: center;
+    .plain-list {
       margin: 0;
-      width: 220px;
-      aspect-ratio: 1;
-      padding: 8px;
-      border: 6px solid #a8b2c2;
-      border-radius: 50%;
-      background: #ffffff;
-      box-shadow: 0 20px 48px rgba(16, 24, 40, 0.18);
+      padding-left: 18px;
+      color: var(--text);
     }
 
-    .photo-card img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 18%;
-      border-radius: 50%;
+    .plain-list li {
+      margin-bottom: 8px;
     }
 
-    .skill-logo-row {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 14px;
-      margin-top: 28px;
-    }
-
-    .skill-dot {
+    .profile-grid {
       display: grid;
-      place-items: center;
-      width: 46px;
-      height: 46px;
-      border-radius: 10px;
-      color: #ffffff;
-      background: var(--skill-color);
-      box-shadow: 0 8px 20px rgba(16, 24, 40, 0.12);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px 18px;
     }
 
-    .skill-dot svg {
-      width: 26px;
-      height: 26px;
+    .profile-item {
+      min-width: 0;
     }
 
-    .tab-row {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin: 16px 0 28px;
-    }
-
-    .tab {
-      min-width: 116px;
-      padding: 10px 18px;
-      color: #3454d1;
-      background: #f7f8ff;
-      border: 0;
-      border-radius: 0;
+    .label {
+      display: block;
+      color: var(--muted);
+      font-size: 0.78rem;
       font-weight: 800;
-      text-align: center;
-    }
-
-    .section-title {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      margin: 0 0 24px;
-      color: var(--accent);
-      font-size: 1.5rem;
-      font-weight: 900;
       letter-spacing: 0;
-      text-align: center;
       text-transform: uppercase;
     }
 
-    .section-title svg {
-      color: var(--accent);
-    }
-
-    .resume-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.95fr);
-      gap: 28px;
-      align-items: start;
-    }
-
-    .stack {
-      display: grid;
-      gap: 22px;
-    }
-
-    .panel {
-      padding: 24px;
-      border-radius: 8px;
-      background: var(--navy);
-      color: #ffffff;
-      box-shadow: var(--shadow);
-    }
-
-    .panel.light {
-      color: var(--ink);
-      background: #ffffff;
-      border: 1px solid var(--line);
-      box-shadow: 0 16px 36px rgba(16, 24, 40, 0.08);
-    }
-
-    .panel h2 {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin: 0 0 16px;
-      color: inherit;
-      font-size: 1.25rem;
-    }
-
-    .panel h2 svg {
-      color: var(--accent);
-    }
-
-    .strength-list {
-      display: grid;
-      gap: 12px;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    .strength-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      color: var(--ink);
-      font-weight: 700;
-    }
-
-    .strength-list svg {
-      flex: 0 0 auto;
-      color: var(--accent);
+    .value {
+      display: block;
       margin-top: 2px;
+      color: var(--ink);
+      font-weight: 650;
+      overflow-wrap: anywhere;
     }
 
-    .profile-table {
+    .education-item {
       display: grid;
-      gap: 10px;
-      margin: 0;
-    }
-
-    .profile-row {
-      display: grid;
-      grid-template-columns: 132px 1fr;
+      grid-template-columns: 84px 1fr;
       gap: 14px;
-      padding: 8px 0;
+      padding: 0 0 12px;
+      margin: 0 0 12px;
     }
 
-    .profile-row dt {
-      color: #d0d7e2;
-      font-weight: 800;
-    }
-
-    .profile-row dd {
-      margin: 0;
-      color: #ffffff;
-      font-weight: 800;
-    }
-
-    .skills-panel {
-      padding: 26px;
-      border-radius: 8px;
-      background: #626c7a;
-      color: #ffffff;
-      box-shadow: var(--shadow);
-    }
-
-    .skills-panel h2 {
-      margin: 0 0 18px;
-      text-align: center;
-      font-size: 1.25rem;
-    }
-
-    .skill-meter {
-      display: grid;
-      gap: 7px;
-      margin-bottom: 14px;
-    }
-
-    .skill-meter:last-child {
+    .education-item:last-child {
+      border-bottom: 0;
       margin-bottom: 0;
+      padding-bottom: 0;
     }
 
-    .meter-label {
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      color: #f6f8fb;
-      font-size: 0.92rem;
+    .period {
+      color: var(--accent);
+      font-size: 0.86rem;
       font-weight: 800;
     }
 
-    .meter-track {
-      overflow: hidden;
-      height: 9px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.16);
-    }
-
-    .meter-fill {
-      width: var(--level);
-      height: 100%;
-      border-radius: inherit;
-      background: linear-gradient(90deg, var(--accent), #ffd166);
+    .education-text {
+      margin: 0;
+      color: var(--text);
+      font-weight: 650;
     }
 
     .declaration {
-      margin-top: 28px;
+      padding-top: 2px;
     }
 
     .declaration p {
       margin: 0;
-      color: var(--muted);
     }
 
     .signature {
-      display: flex;
-      justify-content: space-between;
-      gap: 18px;
-      margin-top: 20px;
-      color: var(--muted);
-      font-weight: 700;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      align-items: end;
+      margin-top: 18px;
+      color: var(--text);
+      font-weight: 650;
     }
 
     .signature-name {
-      min-width: 230px;
-      padding-top: 8px;
-      border-top: 1px solid #9aa4b2;
-      color: var(--navy);
+      padding-top: 7px;
+      border-top: 1px solid #9aa9ad;
+      color: var(--ink);
       text-align: center;
-      font-weight: 900;
+      font-weight: 800;
     }
 
-    .footer {
-      margin-top: 38px;
-      padding: 24px 0;
-      color: #dbe3ee;
-      background: var(--navy);
-      text-align: center;
-    }
-
-    .footer p {
-      margin: 0;
-      font-weight: 700;
-    }
-
-    @media (max-width: 860px) {
-      .nav-inner {
-        width: min(100% - 24px, 720px);
+    @media (max-width: 780px) {
+      .resume-page {
+        width: min(100% - 20px, 680px);
+        margin: 12px auto;
       }
 
-      .nav-links {
-        display: none;
-      }
-
-      .page {
-        width: min(100% - 24px, 720px);
-        padding-top: 28px;
-      }
-
-      .hero {
+      .header {
         grid-template-columns: 1fr;
-        gap: 30px;
-        min-height: auto;
+        padding: 28px 22px 18px;
         text-align: center;
       }
 
-      .hero-copy {
-        order: 2;
+      .photo {
+        grid-row: 1;
+        justify-self: center;
       }
 
-      .photo-card {
-        order: 1;
-        width: 180px;
+      .summary {
+        margin-left: auto;
+        margin-right: auto;
       }
 
-      .objective-card {
-        margin-inline: auto;
-      }
-
-      .contact-strip,
-      .skill-logo-row {
-        justify-content: center;
-      }
-
-      .resume-grid {
+      .contact {
         grid-template-columns: 1fr;
       }
+
+      .contact a,
+      .contact span {
+        border-right: 0;
+        border-bottom: 1px solid var(--rule);
+        text-align: center;
+      }
+
+      .contact :last-child {
+        border-bottom: 0;
+      }
+
+      .content {
+        grid-template-columns: 1fr;
+        padding: 24px 22px 28px;
+      }
+      .content { display: flex; flex-direction: column; gap: 24px; }
+      .column { display: contents; }
+      .content > aside > section:last-child { order: 5; }
     }
 
     @media (max-width: 520px) {
-      .topbar {
-        position: static;
+      body {
+        background: #ffffff;
       }
 
-      .brand {
-        font-size: 0.98rem;
-      }
-
-      .print-button {
-        padding-inline: 10px;
-      }
-
-      .intro-title {
-        font-size: 2.2rem;
-      }
-
-      .intro-title span {
-        font-size: 1.95rem;
-      }
-
-      .objective-card,
-      .panel,
-      .panel.light,
-      .skills-panel {
-        padding: 18px;
-      }
-
-      .contact-strip li {
+      .resume-page {
         width: 100%;
-        justify-content: center;
+        margin: 0;
+        border: 0;
+        box-shadow: none;
       }
 
-      .tab-row {
-        display: none;
+      .name {
+        font-size: 2.15rem;
       }
 
-      .section-title {
-        margin-top: 16px;
-        font-size: 1.25rem;
-      }
-
-      .profile-row {
+      .profile-grid,
+      .signature,
+      .education-item {
         grid-template-columns: 1fr;
-        gap: 2px;
       }
+    }
 
-      .signature {
-        display: grid;
-      }
-
-      .signature-name {
-        min-width: 0;
-        width: 100%;
-      }
+    @page {
+      size: A4;
+      margin: 15mm 17mm;
     }
 
     @media print {
-      .topbar,
-      .footer,
-      .tab-row {
-        display: none;
-      }
-
+      html { font-size: 13.333px; }
       body {
         background: #ffffff;
-        font-size: 12px;
+        font-size: 10pt;
+        line-height: 1.42;
       }
 
-      .page {
+      .resume-page {
         width: 100%;
+        margin: 0;
+        border: 0;
+        box-shadow: none;
+      }
+
+      .header {
+        grid-template-columns: 1fr 92px;
+        gap: 18px;
+        padding: 0 0 9px;
+        text-align: left;
+      }
+
+      .name {
+        font-size: 2.42rem;
+      }
+
+      .title {
+        margin-top: 5px;
+        font-size: 0.94rem;
+      }
+
+      .summary {
+        margin-top: 9px;
+        max-width: none;
+      }
+
+      .photo {
+        width: 92px;
+        grid-row: auto;
+        justify-self: end;
+      }
+
+      .contact {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 8px 0;
+        gap: 4px 16px;
+        background: none;
+      }
+
+      .contact a,
+      .contact span {
         padding: 0;
+        border: 0;
+        font-size: 9pt;
+        text-align: left;
       }
+      .contact a[href^="https"] { flex-basis: 100%; font-size: 0; }
+      .contact a[href^="https"]::after { content: attr(href); font-size: 9pt; }
 
-      .hero {
-        grid-template-columns: 1fr 150px;
-        gap: 22px;
-        min-height: auto;
-        margin-bottom: 16px;
-      }
-
-      .photo-card {
-        width: 140px;
-        box-shadow: none;
-      }
-
-      .objective-card,
-      .panel,
-      .skills-panel {
-        box-shadow: none;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-      }
-
-      .resume-grid {
-        grid-template-columns: 1fr 1fr;
+      .content {
+        display: flex;
+        flex-direction: column;
         gap: 16px;
+        padding: 15px 0 0;
+      }
+
+      .column {
+        display: contents;
+      }
+      .content > .column > section { break-inside: avoid; }
+      .content > aside > section:last-child { order: 5; }
+
+      .section-title {
+        margin-bottom: 7px;
+        font-size: 10pt;
+      }
+
+      .skills-list {
+        gap: 5px;
+      }
+
+      .skills-list li {
+        padding: 0 12px 0 0;
+        border: 0;
+        background: none;
+        color: var(--ink);
+        font-size: 10pt;
+      }
+
+      .plain-list li {
+        margin-bottom: 5px;
+      }
+
+      .profile-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 10px 14px;
+      }
+
+      .label {
+        font-size: 8pt;
+      }
+
+      .education-item {
+        grid-template-columns: 68px 1fr;
+        gap: 10px;
+        padding-bottom: 8px;
+        margin-bottom: 8px;
+      }
+
+      .period {
+        font-size: 0.75rem;
+      }
+
+      .signature {
+        grid-template-columns: 1fr 180px;
+        margin-top: 12px;
       }
     }
   </style>
+  <style>
+    :root { --ink:#26352e; --text:#394c40; --muted:#56655d; --accent:#28634d; --rule:#d8e1db; }
+    html { scroll-behavior:smooth; scroll-padding-top:100px; }
+    body { background:white; font-size:17px; line-height:1.75; }
+    ::selection { background:#cde5d6; color:#173e2a; }
+    a:focus-visible,summary:focus-visible { outline:3px solid #a44361; outline-offset:5px; }
+    a:hover { color:var(--accent); }
+    .wrap { width:min(1120px,calc(100% - 80px)); margin-inline:auto; }
+    .site-nav { position:sticky; top:0; background:white; border-bottom:1px solid var(--rule); z-index:10; }
+    .nav-inner { min-height:80px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+    .brand { font-size:20px; font-weight:700; text-decoration:none; }
+    nav { display:flex; gap:30px; }
+    nav a { font-size:14px; text-decoration:none; padding:10px 0; }
+    nav a:hover { text-decoration:underline; }
+    .resume-page { width:100%; margin:0; border:0; box-shadow:none; }
+    .header { display:flex; flex-direction:column; align-items:center; gap:0; padding:52px 24px; background:#fbf0f2; border:0; text-align:center; }
+    .photo { order:-1; width:112px; padding:0; border:0; background:none; margin:0 0 24px; }
+    .photo img { height:130px; width:112px; border-radius:56px 56px 5px 5px; }
+    .name { font:normal 76px/1.1 Georgia,'Times New Roman',serif; }
+    .title { color:var(--muted); font-size:20px; font-weight:400; margin:18px 0 22px; }
+    .intro-links { display:flex; justify-content:center; gap:28px; font-size:15px; }
+    .content { display:flex; flex-direction:column; padding:0; gap:0; }
+    .column { display:contents; }
+    .web-section { padding:68px 0; border-bottom:1px solid var(--rule); }
+    .section-inner { display:grid; grid-template-columns:260px minmax(0,1fr); gap:60px; }
+    .section-title { font:normal 36px/1.2 Georgia,'Times New Roman',serif; text-transform:none; border:0; padding:0; margin:0; }
+    .summary { margin:0; font-size:20px; line-height:1.8; max-width:68ch; }
+    #skills { background:#f1f6f2; }
+    .skills-list { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:0 28px; }
+    .skills-list li { display:flex; align-items:center; gap:12px; min-height:86px; padding:14px 0; border:0; border-bottom:1px solid #d0dfd5; background:none; color:var(--ink); font-size:16px; font-weight:600; }
+    .skills-list img { width:28px; height:28px; flex-shrink:0; }
+    .plain-list { list-style:none; padding:0; }
+    .plain-list li { padding:18px 0; border-bottom:1px solid var(--rule); margin:0; }
+    .plain-list li:first-child { padding-top:0; }
+    .plain-list li:last-child { border:0; padding-bottom:0; }
+    .profile-grid { gap:26px 40px; }
+    .label { text-transform:none; font-size:13px; font-weight:400; }
+    .value { font-size:17px; font-weight:400; }
+    .education-item { grid-template-columns:115px 1fr; gap:24px; margin-bottom:28px; padding:0; }
+    .education-text { font-size:18px; font-weight:500; }
+    .period { font-size:14px; font-weight:600; }
+    #contact { background:#fbf0f2; }
+    .contact { display:flex; flex-wrap:wrap; gap:12px 28px; background:none; border:0; }
+    .contact a,.contact span { display:inline; padding:0; border:0; font-size:16px; font-weight:400; }
+    .contact a:first-child { flex-basis:100%; font-size:27px; }
+    footer { padding:30px 0; font-size:14px; color:var(--muted); }
+    .footer-inner { display:flex; justify-content:space-between; gap:30px; }
+    details { max-width:650px; }
+    summary { cursor:pointer; width:fit-content; }
+    .declaration { margin-top:18px; }
+    .signature { display:flex; justify-content:space-between; flex-wrap:wrap; gap:20px; font-weight:400; }
+    .signature-name { border:0; padding:0; font-weight:400; }
+    @media(max-width:900px) {
+      .wrap { width:calc(100% - 48px); }
+      .section-inner { grid-template-columns:210px minmax(0,1fr); gap:32px; }
+      .skills-list { grid-template-columns:repeat(2,minmax(0,1fr)); }
+      .name { font-size:60px; }
+    }
+    @media(max-width:600px) {
+      html { scroll-padding-top:130px; }
+      .wrap { width:calc(100% - 40px); }
+      .nav-inner { flex-direction:column; align-items:flex-start; gap:6px; padding-block:14px 10px; }
+      .brand { font-size:17px; }
+      nav { justify-content:space-between; width:100%; gap:12px; }
+      nav a { font-size:13px; padding:6px 0; }
+      .header { padding:38px 20px; }
+      .photo { width:92px; }
+      .photo img { width:92px; height:108px; }
+      .name { font-size:42px; }
+      .title { font-size:17px; max-width:280px; margin:16px auto 22px; }
+      .web-section { padding:44px 0; }
+      .section-inner { grid-template-columns:1fr; gap:26px; }
+      .section-title { font-size:30px; }
+      .summary { font-size:18px; }
+      .skills-list { gap:0 20px; }
+      .skills-list li { font-size:14px; gap:9px; }
+      .skills-list img { width:24px; height:24px; }
+      .education-item { grid-template-columns:1fr; gap:8px; }
+      .education-text { font-size:17px; }
+      .profile-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px 18px; }
+      .value { font-size:15px; }
+      .contact a:first-child { font-size:21px; }
+      .footer-inner { flex-direction:column; }
+    }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+  </style>
 </head>
-<body>
-  <header class="topbar">
-    <div class="nav-inner">
-      <div class="brand">Dhanalakshmi P</div>
-      <nav class="nav-links" aria-label="Resume sections">
-        <a href="file:///C:/Users/praka/Documents/Codex/2026-10-01/i-x20/outputs/Dhanalakshmi%20P%20-%20Professional%20Resume.html#profile">Profile</a>
-        <a href="file:///C:/Users/praka/Documents/Codex/2026-10-01/i-x20/outputs/Dhanalakshmi%20P%20-%20Professional%20Resume.html#skills">Skills</a>
-        <a href="file:///C:/Users/praka/Documents/Codex/2026-10-01/i-x20/outputs/Dhanalakshmi%20P%20-%20Professional%20Resume.html#strengths">Strengths</a>
-        <a href="file:///C:/Users/praka/Documents/Codex/2026-10-01/i-x20/outputs/Dhanalakshmi%20P%20-%20Professional%20Resume.html#contact">Contact</a>
-      </nav>
-      <button class="print-button" type="button" onclick="window.print()">Print / Save PDF</button>
-    </div>
-  </header>
-
-  <main class="page">
-    <section class="hero" id="profile">
-      <div class="hero-copy">
-        <h1 class="intro-title"><span>Dhanalakshmi P</span></h1>
-        <p class="intro-role">Electronics and Communication Engineer</p>
-        <div class="objective-card">
-          <p>B.E. Electronics and Communication Engineering graduate, completed from June 2016 to April 2020, with High School education from General Cariappa Higher Secondary School from June 2014 to April 2016. Seeking an opportunity to apply my technical skills, problem-solving ability, and adaptable working style in an organization that supports professional growth.</p>
-        </div>
-        <ul class="contact-strip" id="contact" aria-label="Contact details">
-          <li>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z"></path><path d="m4 7 8 6 8-6"></path></svg>
-            <a href="mailto:dhanappn1116@gmail.com">dhanappn1116@gmail.com</a>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.4 2.1L8 9.7a16 16 0 0 0 6.3 6.3l1.3-1.3a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"></path></svg>
-            <a href="tel:9840897186">9840897186</a>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.3 7-12a7 7 0 0 0-14 0c0 6.7 7 12 7 12z"></path><circle cx="12" cy="9" r="2.5"></circle></svg>
-            <span>Chennai - 600056</span>
-          </li>
-        </ul>
-        <div class="skill-logo-row" id="skillLogoRow" aria-label="Skill icons">
-      <span class="skill-dot" style="--skill-color: #e2552f" title="HTML">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h16l-1.5 17L12 22l-6.5-2L4 3z"></path><path d="M8 8h8"></path><path d="M8.5 12h7l-.4 4.2L12 17.2l-3.1-1"></path></svg>
-      </span>
-    
-      <span class="skill-dot" style="--skill-color: #2862e9" title="CSS">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h16l-1.5 17L12 22l-6.5-2L4 3z"></path><path d="M8 8h8l-1 4H9l-.5 4 3.5 1.2 3.5-1.2"></path></svg>
-      </span>
-    
-      <span class="skill-dot" style="--skill-color: #b78405" title="JavaScript">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8v7a2 2 0 0 1-2 2H5"></path><path d="M13 16.5c.7.4 1.5.6 2.5.6 1.4 0 2.5-.7 2.5-1.8 0-2.6-4.8-1.3-4.8-4.6 0-1.7 1.4-2.7 3.2-2.7.9 0 1.8.2 2.5.7"></path><path d="M3 3h18v18H3z"></path></svg>
-      </span>
-    
-      <span class="skill-dot" style="--skill-color: #087ea4" title="React">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="2"></circle><ellipse cx="12" cy="12" rx="9" ry="3.8"></ellipse><ellipse cx="12" cy="12" rx="9" ry="3.8" transform="rotate(60 12 12)"></ellipse><ellipse cx="12" cy="12" rx="9" ry="3.8" transform="rotate(120 12 12)"></ellipse></svg>
-      </span>
-    
-      <span class="skill-dot" style="--skill-color: #336791" title="SQL">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="7" ry="3"></ellipse><path d="M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5"></path><path d="M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"></path></svg>
-      </span>
-    
-      <span class="skill-dot" style="--skill-color: #de4c36" title="Git">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="2"></circle><circle cx="18" cy="18" r="2"></circle><circle cx="6" cy="18" r="2"></circle><path d="M6 8v8"></path><path d="M8 6h3.5a3.5 3.5 0 0 1 3.5 3.5V16"></path></svg>
-      </span>
-    
-      <span class="skill-dot" style="--skill-color: #ca5010" title="MS Office">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"></path><path d="M15 3v5h4"></path><path d="M9 13h6"></path><path d="M9 17h6"></path></svg>
-      </span>
-    
-      <span class="skill-dot" style="--skill-color: #4f46a5" title="Electronics &amp; Communication">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="2"></rect><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"></path><path d="M10 12h4"></path></svg>
-      </span>
-    
-      <span class="skill-dot" style="--skill-color: #157f5c" title="Problem Solving">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6"></path><path d="M10 22h4"></path><path d="M8.5 14.5A6 6 0 1 1 15.5 14.5c-.9.7-1.5 1.6-1.5 2.5h-4c0-.9-.6-1.8-1.5-2.5z"></path><path d="M12 7v3l2 1"></path></svg>
-      </span>
-    </div>
-      </div>
-
-      <figure class="photo-card">
-        <img src="profile.jpg" alt="Profile Photo">
+<body><header class="site-nav"><div class="wrap nav-inner"><a class="brand" href="#home">Dhanalakshmi P</a><nav aria-label="Main navigation"><a href="#about">About</a><a href="#skills">Skills</a><a href="#background">Background</a><a href="#contact">Contact</a></nav></div></header>
+  <main class="resume-page" aria-label="Dhanalakshmi P personal website" id="home">
+    <header class="header">
+      <div>
+        <h1 class="name">Dhanalakshmi P</h1>
+        <p class="title">Electronics and Communication Engineer</p>
+        
+      <div class="intro-links"><a href="mailto:dhanappn1116@gmail.com">Get in touch</a><a href="https://github.com/dhanappn1116/Dhana-Resume/tree/main">GitHub</a></div></div>
+      <figure class="photo">
+        <img src="dhanalakshmi-profile.png" alt="Dhanalakshmi P profile photo">
       </figure>
-    </section>
+    </header>
 
-    <h2 class="section-title">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 10-13h-7l1-7z"></path></svg>
-      Professional Details
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 10-13h-7l1-7z"></path></svg>
-    </h2>
+    
 
-    <section class="resume-grid">
-      <div class="stack">
-        <article class="panel light" id="strengths">
-          <h2>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v6"></path><path d="m5 5 4 4"></path><path d="M2 12h6"></path><path d="m5 19 4-4"></path><path d="M12 22v-6"></path><path d="m19 19-4-4"></path><path d="M22 12h-6"></path><path d="m19 5-4 4"></path></svg>
-            Strengths
-          </h2>
-          <ul class="strength-list">
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h7a5 5 0 0 1 5 5v0a5 5 0 0 0 5 5h-3"></path><path d="m18 13 3 4-3 4"></path><path d="M4 17h5"></path></svg><span>Adaptable in new environments and open to continuous learning.</span></li>
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.9"></path><path d="M16 3.1a4 4 0 0 1 0 7.8"></path></svg><span>Comfortable working with a team and supporting shared goals.</span></li>
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6"></path><path d="M10 22h4"></path><path d="M8.5 14.5A6 6 0 1 1 15.5 14.5c-.9.7-1.5 1.6-1.5 2.5h-4c0-.9-.6-1.8-1.5-2.5z"></path></svg><span>Self-motivated, hard working, and focused on practical problem solving.</span></li>
-          </ul>
-        </article>
-
-        <article class="skills-panel" id="skills">
-          <h2>Technical Skills</h2>
-          <div id="skillMeters">
-      <div class="skill-meter">
-        <div class="meter-label">
-          <span>HTML</span>
-          <span>78%</span>
-        </div>
-        <div class="meter-track" aria-hidden="true">
-          <div class="meter-fill" style="--level: 78%"></div>
-        </div>
-      </div>
-    
-      <div class="skill-meter">
-        <div class="meter-label">
-          <span>CSS</span>
-          <span>76%</span>
-        </div>
-        <div class="meter-track" aria-hidden="true">
-          <div class="meter-fill" style="--level: 76%"></div>
-        </div>
-      </div>
-    
-      <div class="skill-meter">
-        <div class="meter-label">
-          <span>JavaScript</span>
-          <span>66%</span>
-        </div>
-        <div class="meter-track" aria-hidden="true">
-          <div class="meter-fill" style="--level: 66%"></div>
-        </div>
-      </div>
-    
-      <div class="skill-meter">
-        <div class="meter-label">
-          <span>React</span>
-          <span>60%</span>
-        </div>
-        <div class="meter-track" aria-hidden="true">
-          <div class="meter-fill" style="--level: 60%"></div>
-        </div>
-      </div>
-    
-      <div class="skill-meter">
-        <div class="meter-label">
-          <span>SQL</span>
-          <span>68%</span>
-        </div>
-        <div class="meter-track" aria-hidden="true">
-          <div class="meter-fill" style="--level: 68%"></div>
-        </div>
-      </div>
-    
-      <div class="skill-meter">
-        <div class="meter-label">
-          <span>Git</span>
-          <span>62%</span>
-        </div>
-        <div class="meter-track" aria-hidden="true">
-          <div class="meter-fill" style="--level: 62%"></div>
-        </div>
-      </div>
-    
-      <div class="skill-meter">
-        <div class="meter-label">
-          <span>MS Office</span>
-          <span>82%</span>
-        </div>
-        <div class="meter-track" aria-hidden="true">
-          <div class="meter-fill" style="--level: 82%"></div>
-        </div>
-      </div>
-    
-      <div class="skill-meter">
-        <div class="meter-label">
-          <span>Electronics &amp; Communication</span>
-          <span>80%</span>
-        </div>
-        <div class="meter-track" aria-hidden="true">
-          <div class="meter-fill" style="--level: 80%"></div>
-        </div>
-      </div>
-    
-      <div class="skill-meter">
-        <div class="meter-label">
-          <span>Problem Solving</span>
-          <span>84%</span>
-        </div>
-        <div class="meter-track" aria-hidden="true">
-          <div class="meter-fill" style="--level: 84%"></div>
-        </div>
-      </div>
-    </div>
-        </article>
-      </div>
-
-      <aside class="stack">
-        <article class="panel">
-          <h2>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg>
-            Personal Profile
-          </h2>
-          <dl class="profile-table">
-            <div class="profile-row"><dt>Name</dt><dd>DHANALAKSHMI P</dd></div>
-            <div class="profile-row"><dt>Date of Birth</dt><dd>16-11-1998</dd></div>
-            <div class="profile-row"><dt>Gender</dt><dd>Female</dd></div>
-            <div class="profile-row"><dt>Father's Name</dt><dd>P. Paulraj</dd></div>
-            <div class="profile-row"><dt>Languages</dt><dd>Tamil, English, Telugu</dd></div>
-            <div class="profile-row"><dt>Marital Status</dt><dd>Married</dd></div>
-            <div class="profile-row"><dt>Nationality</dt><dd>Indian</dd></div>
-            <div class="profile-row"><dt>Religion</dt><dd>Hindu</dd></div>
-          </dl>
-        </article>
-
-        <article class="panel light declaration">
-          <h2>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path><path d="M9 15h6"></path><path d="M9 18h4"></path></svg>
-            Declaration
-          </h2>
-          <p>I hereby declare that the above-mentioned information is true to the best of my knowledge and belief.</p>
-          <div class="signature">
-            <div>
-              <div><strong>Date:</strong> <span id="currentDate">1 October 2026</span></div>
-              <div><strong>Place:</strong> Chennai</div>
+    <div class="content"><section id="about" class="web-section"><div class="wrap section-inner"><h2 class="section-title">Career objective</h2><div><p class="summary">B.E. Electronics and Communication Engineering graduate, completed from June 2016 to April 2020, with High School education from General Cariappa Higher Secondary School from June 2014 to April 2016. Seeking an opportunity to apply my technical skills, problem-solving ability, and adaptable working style in an organization that supports professional growth.</p></div></div></section><section id="skills" class="web-section">
+          
+          
+        <div class="wrap section-inner"><h2 class="section-title">Technical Skills</h2><div><ul class="skills-list">
+            <li><img src="assets/html.svg" alt="">HTML</li>
+            <li><img src="assets/css.svg" alt="">CSS</li>
+            <li><img src="assets/javascript.svg" alt="">JavaScript</li>
+            <li><img src="assets/react.svg" alt="">React</li>
+            <li><img src="assets/database.svg" alt="">SQL</li>
+            <li><img src="assets/git.svg" alt="">Git</li>
+            <li><img src="assets/office.svg" alt="">MS Office</li>
+            <li><img src="assets/cpu.svg" alt="">Electronics &amp; Communication</li>
+            <li><img src="assets/puzzle.svg" alt="">Problem Solving</li>
+          </ul></div></div></section><section id="background" class="web-section">
+          
+          
+          
+        <div class="wrap section-inner"><h2 class="section-title">Education Summary</h2><div><div class="education-item">
+            <div class="period">2016 - 2020</div>
+            <p class="education-text">B.E. Electronics and Communication Engineering graduate, completed from June 2016 to April 2020.</p>
+          </div><div class="education-item">
+            <div class="period">2014 - 2016</div>
+            <p class="education-text">High School education from General Cariappa Higher Secondary School from June 2014 to April 2016.</p>
+          </div></div></div></section><section id="strengths" class="web-section">
+          
+          
+        <div class="wrap section-inner"><h2 class="section-title">Strengths</h2><div><ul class="plain-list">
+            <li>Adaptable in new environments and open to continuous learning.</li>
+            <li>Comfortable working with a team and supporting shared goals.</li>
+            <li>Self-motivated, hard working, and focused on practical problem solving.</li>
+          </ul></div></div></section><section id="profile" class="web-section">
+          
+          
+        <div class="wrap section-inner"><h2 class="section-title">Personal Profile</h2><div><div class="profile-grid">
+            <div class="profile-item"><span class="label">Name</span><span class="value">DHANALAKSHMI P</span></div>
+            <div class="profile-item"><span class="label">Date of Birth</span><span class="value">16-11-1998</span></div>
+            <div class="profile-item"><span class="label">Gender</span><span class="value">Female</span></div>
+            <div class="profile-item"><span class="label">Father's Name</span><span class="value">P. Paulraj</span></div>
+            <div class="profile-item"><span class="label">Languages</span><span class="value">Tamil, English, Telugu</span></div>
+            <div class="profile-item"><span class="label">Marital Status</span><span class="value">Married</span></div>
+            <div class="profile-item"><span class="label">Nationality</span><span class="value">Indian</span></div>
+            <div class="profile-item"><span class="label">Religion</span><span class="value">Hindu</span></div>
+          </div></div></div></section><section id="contact" class="web-section"><div class="wrap section-inner"><h2 class="section-title">Contact</h2><section class="contact" aria-label="Contact and project links">
+      <a href="mailto:dhanappn1116@gmail.com">dhanappn1116@gmail.com</a>
+      <a href="tel:9840897186">9840897186</a>
+      <span>Chennai - 600056</span>
+      <a href="https://github.com/dhanappn1116/Dhana-Resume/tree/main">GitHub</a>
+      <a href="https://dhana-resume.onrender.com">Render</a>
+    </section></div></section></div>
+  </main><footer><div class="wrap footer-inner"><details><summary>Declaration</summary><div class="declaration">
+            <p>I hereby declare that the above-mentioned information is true to the best of my knowledge and belief.</p>
+            <div class="signature">
+              <div>
+                <div><strong>Date:</strong> <span id="currentDate">1 October 2026</span></div>
+                <div><strong>Place:</strong> Chennai</div>
+              </div>
+              <div class="signature-name">(DHANALAKSHMI P)</div>
             </div>
-            <div class="signature-name">(DHANALAKSHMI P)</div>
-          </div>
-        </article>
-      </aside>
-    </section>
-  </main>
+          </div></details><a href="#home">Back to top</a></div></footer>
 
-  <footer class="footer">
-    <p>Professional Resume | Dhanalakshmi P</p>
-  </footer>
-
-  <script type="application/json" id="resumeSkills">
-    [
-      { "name": "HTML", "icon": "html", "color": "#e2552f", "level": 78 },
-      { "name": "CSS", "icon": "css", "color": "#2862e9", "level": 76 },
-      { "name": "JavaScript", "icon": "javascript", "color": "#b78405", "level": 66 },
-      { "name": "React", "icon": "react", "color": "#087ea4", "level": 60 },
-      { "name": "SQL", "icon": "sql", "color": "#336791", "level": 68 },
-      { "name": "Git", "icon": "git", "color": "#de4c36", "level": 62 },
-      { "name": "MS Office", "icon": "office", "color": "#ca5010", "level": 82 },
-      { "name": "Electronics & Communication", "icon": "electronics", "color": "#4f46a5", "level": 80 },
-      { "name": "Problem Solving", "icon": "problemSolving", "color": "#157f5c", "level": 84 }
-    ]
-  </script>
-
-  <script>
-    const skillData = JSON.parse(document.getElementById("resumeSkills").textContent);
-    const skillLogoRow = document.getElementById("skillLogoRow");
-    const skillMeters = document.getElementById("skillMeters");
-    const skillIcons = {
-      html: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h16l-1.5 17L12 22l-6.5-2L4 3z"></path><path d="M8 8h8"></path><path d="M8.5 12h7l-.4 4.2L12 17.2l-3.1-1"></path></svg>',
-      css: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h16l-1.5 17L12 22l-6.5-2L4 3z"></path><path d="M8 8h8l-1 4H9l-.5 4 3.5 1.2 3.5-1.2"></path></svg>',
-      javascript: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8v7a2 2 0 0 1-2 2H5"></path><path d="M13 16.5c.7.4 1.5.6 2.5.6 1.4 0 2.5-.7 2.5-1.8 0-2.6-4.8-1.3-4.8-4.6 0-1.7 1.4-2.7 3.2-2.7.9 0 1.8.2 2.5.7"></path><path d="M3 3h18v18H3z"></path></svg>',
-      react: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="2"></circle><ellipse cx="12" cy="12" rx="9" ry="3.8"></ellipse><ellipse cx="12" cy="12" rx="9" ry="3.8" transform="rotate(60 12 12)"></ellipse><ellipse cx="12" cy="12" rx="9" ry="3.8" transform="rotate(120 12 12)"></ellipse></svg>',
-      sql: '<svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="7" ry="3"></ellipse><path d="M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5"></path><path d="M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"></path></svg>',
-      git: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="2"></circle><circle cx="18" cy="18" r="2"></circle><circle cx="6" cy="18" r="2"></circle><path d="M6 8v8"></path><path d="M8 6h3.5a3.5 3.5 0 0 1 3.5 3.5V16"></path></svg>',
-      office: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"></path><path d="M15 3v5h4"></path><path d="M9 13h6"></path><path d="M9 17h6"></path></svg>',
-      electronics: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="2"></rect><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"></path><path d="M10 12h4"></path></svg>',
-      problemSolving: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6"></path><path d="M10 22h4"></path><path d="M8.5 14.5A6 6 0 1 1 15.5 14.5c-.9.7-1.5 1.6-1.5 2.5h-4c0-.9-.6-1.8-1.5-2.5z"></path><path d="M12 7v3l2 1"></path></svg>'
-    };
-
-    skillLogoRow.innerHTML = skillData.map((skill) => `
-      <span class="skill-dot" style="--skill-color: ${skill.color}" title="${skill.name}">
-        ${skillIcons[skill.icon]}
-      </span>
-    `).join("");
-
-    skillMeters.innerHTML = skillData.map((skill) => `
-      <div class="skill-meter">
-        <div class="meter-label">
-          <span>${skill.name}</span>
-          <span>${skill.level}%</span>
-        </div>
-        <div class="meter-track" aria-hidden="true">
-          <div class="meter-fill" style="--level: ${skill.level}%"></div>
-        </div>
-      </div>
-    `).join("");
-
-    document.getElementById("currentDate").textContent = new Date().toLocaleDateString("en-IN", {
-      year: "numeric",
-      month: "long",
-      day: "numeric"
-    });
-  </script>
+  
 
 
 </body></html>
